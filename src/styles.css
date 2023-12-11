@@ -1,0 +1,141 @@
+@font-face {
+  font-family: 'superfont';
+  src: url('./img/superfont.ttf') format('truetype');
+}
+
+* {
+  font-family: 'superfont', sans-serif;
+  /* Set font-family to 'superfont' and fallback to sans-serif if 'superfont' is not available */
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+body {
+  font-family: 'superfont', sans-serif;
+  background: url('./img/BG.png');
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+}
+
+.App {
+  text-align: center;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  /* Make the App take the full height of the viewport */
+}
+
+.centered-heading {
+  color: rgb(255, 255, 255);
+  font-size: 60px;
+  text-shadow: 10px 10px 20px rgb(0, 0, 0);
+  letter-spacing: 2px;
+}
+
+.wrapper {
+  margin-top: 1%;
+  background: linear-gradient(to bottom, #5d82fc, rgb(213, 221, 252));
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+  text-align: left;
+  color: white;
+}
+
+.large-text {
+  font-size: 40px;
+  text-align: center;
+  text-shadow: 5px 5px 20px rgb(0, 0, 0);
+  color: aliceblue;
+  letter-spacing: 4px;
+  margin-bottom: 0;
+}
+
+.tutorial-button {
+  margin-top: 1%;
+  margin-right: 5%;
+  margin-left: 5%;
+  padding: 5px;
+  font-size: 20px;
+  background-color: rgb(96, 255, 144);
+  color: rgb(0, 0, 0);
+  border: 3px solid hsl(0, 0%, 0%);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.tutorial-button:hover {
+  background-color: #61d2ff;
+  color: rgb(255, 255, 255);
+}
+
+.btn {
+  background: hsl(200, 100%, 50%, 0.1);
+  border: 1px solid hsl(200, 100%, 50%);
+  color: hsl(200, 100%, 50%);
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  background: hsl(200, 100%, 50%, 0.2);
+}
+
+.btn.btn-danger {
+  background: hsl(0, 100%, 40%, 0.1);
+  border: 1px solid hsl(0, 83%, 54%);
+  color: hsl(0, 100%, 55%);
+}
+
+.btn.btn-danger:hover,
+.btn.btn-danger:focus-visible {
+  background: hsl(0, 100%, 40%, 0.2);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  /* Adjust the alpha value for the desired transparency */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  /* Ensure the overlay is on top of other content */
+}
+
+.control-buttons-container {
+  display: flex;
+  margin-top: 1%;
+  justify-content: center;
+}
+
+.control-button {
+  margin-top: 1%;
+  margin-right: 1%;
+  margin-left: 1%;
+  padding: 5px;
+  font-size: 20px;
+  background-color: rgb(255, 200, 97);
+  color: rgb(255, 255, 255);
+  border: 3px solid hsl(0, 0%, 0%);
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px rgb(255, 200, 0);
+}
+
+.control-button:hover {
+  background-color: rgb(249, 251, 131);
+  color: rgb(0, 0, 0);
+  transform: scale(1.1);
+}

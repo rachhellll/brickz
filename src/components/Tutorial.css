@@ -1,0 +1,136 @@
+.tutorial-dialog {
+    position: fixed;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    background: linear-gradient(to bottom, #a4e981, rgb(181, 235, 219));
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    box-shadow: 10 10px rgba(0, 0, 0, 0.422);
+    border-radius: 20px;
+    padding: 10px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    /* Initially set opacity to 0 */
+    transform: translate(-50%, 50%) scale(1.1);
+    /* Initially scale down the component */
+    transition: opacity 0.5s ease, transform 0.2s ease-in;
+    /* Add transition for opacity and transform */
+}
+
+.tutorial-dialog.open {
+    opacity: 1;
+    /* When the class 'open' is applied, set opacity to 1 */
+    transform: translate(-50%, -50%) scale(1.05);
+    /* Scale up the component */
+}
+
+.tutorial-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    text-align: center;
+    /* Center the content inside the tutorial */
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Styling for the buttons */
+.navigation-buttons button {
+    margin: 10 10px;
+    /* Add space between the buttons */
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Style "Prev" and "Next" buttons */
+.navigation-buttons .prev-button {
+    order: 1;
+    margin: 5px 5px;
+    background-color: #c3c3c3;
+    transition: background-color 0.2s;
+}
+
+.navigation-buttons .prev-button:hover {
+    background-color: #00ffe5;
+    transform: scale(1.05);
+}
+
+.navigation-buttons .next-button {
+    order: 3;
+    margin: 5px 5px;
+    background-color: #c3c3c3;
+    transition: background-color 0.2s;
+}
+
+.navigation-buttons .next-button:hover {
+    background-color: #00ffe5;
+    transform: scale(1.05);
+}
+
+/* Style "Close" button */
+.close-button {
+    order: 2;
+    padding: 5px;
+    background-color: #c3c3c3;
+    transition: background-color 0.2s;
+    border-radius: 5px;
+}
+
+.close-button:hover {
+    background-color: #00ffe5;
+}
+
+.tutorial-dialog.closing {
+    opacity: 0;
+    /* When the class 'closing' is applied, set opacity to 0 */
+    transform: translate(-50%, -50%) scale(0.8);
+    /* Scale down the component */
+}
+
+.tutorial-image {
+    width: 55%;
+    height: 55%;
+    border: 2px solid hsl(0, 0, 0);
+    border-radius: 10px;
+}
+
+.tutorial-button.sparkle {
+    animation: sparkle 1s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+        background-color: #00f2ff;
+        box-shadow: 2px 2px 30px rgb(252, 255, 66);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+}
