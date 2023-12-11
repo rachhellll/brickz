@@ -94,7 +94,7 @@ const Tutorial = ({ onClose, enableSparkle }) => {
           <div>
             <img src={tut1} className="tutorial-image" />
             <br></br>
-              <span style={{ color: 'blue', textShadow: '1px 1px 8px rgba(0, 0, 0, 1)' }}>
+              <span style={{ color: 'yellowgreen', textShadow: '1px 1px 8px rgba(0, 0, 0, 1)' }}>
                 Move the left and right arrow keys on your keyboard
               </span>
             <br></br>
